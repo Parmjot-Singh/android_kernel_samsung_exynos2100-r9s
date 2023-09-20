@@ -2,7 +2,7 @@
 
 / {
 	model = "Huawei Nexus 6P";
-	compatible = "huawei,angler", "qcom,msm8994";
+	compatible = "huawei,angler\0qcom,msm8994";
 	qcom,msm-id = <0xcf 0x20000>;
 	qcom,pmic-id = <0x10009 0x1000a 0x00 0x00>;
 	interrupt-parent = <0x01>;
@@ -140,11 +140,11 @@
 
 				pinmux {
 					function = "blsp_uart2";
-					pins = "gpio4", "gpio5";
+					pins = "gpio4\0gpio5";
 				};
 
 				pinconf {
-					pins = "gpio4", "gpio5";
+					pins = "gpio4\0gpio5";
 					drive-strength = <0x10>;
 					bias-disable;
 				};
@@ -155,11 +155,11 @@
 
 				pinmux {
 					function = "gpio";
-					pins = "gpio4", "gpio5";
+					pins = "gpio4\0gpio5";
 				};
 
 				pinconf {
-					pins = "gpio4", "gpio5";
+					pins = "gpio4\0gpio5";
 					drive-strength = <0x02>;
 					bias-pull-down;
 				};
@@ -167,13 +167,13 @@
 		};
 
 		serial@f991e000 {
-			compatible = "qcom,msm-uartdm-v1.4", "qcom,msm-uartdm";
+			compatible = "qcom,msm-uartdm-v1.4\0qcom,msm-uartdm";
 			reg = <0xf991e000 0x1000>;
 			interrupts = <0x00 0x6c 0x04>;
 			status = "okay";
-			clock-names = "core", "iface";
+			clock-names = "core\0iface";
 			clocks = <0x04 0x48 0x04 0x3a>;
-			pinctrl-names = "default", "sleep";
+			pinctrl-names = "default\0sleep";
 			pinctrl-0 = <0x05>;
 			pinctrl-1 = <0x06>;
 			phandle = <0x0c>;
