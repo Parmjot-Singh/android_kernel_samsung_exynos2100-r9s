@@ -396,7 +396,7 @@ void dbg_snapshot_ecc_dump(void)
 
 		for (i = 0; i < (int)erridr_el1.field.NUM; i++) {
 #if IS_ENABLED(CONFIG_SEC_DEBUG_AUTO_COMMENT)
-			cchar summ_buf[SUMMARY_BUF_MAX] = "";
+			char summ_buf[SUMMARY_BUF_MAX] = "";
 			int pos = 0;
 #endif
 
